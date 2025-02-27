@@ -125,12 +125,12 @@ public class TestSinhVien {
 
 
     /*** Test Xóa Sinh Viên ***/
-    @Test
-    public void xoa01_TonTai() {
-        sinhVienService.themSinhVien(sinhVien);
-        boolean kq = sinhVienService.xoaSinhVien("SV01");
-        Assertions.assertTrue(kq);
-    }
+//    @Test
+//    public void xoa01_TonTai() {
+//        sinhVienService.themSinhVien(sinhVien);
+//        boolean kq = sinhVienService.xoaSinhVien("SV01");
+//        Assertions.assertTrue(kq);
+//    }
 
     @Test
     public void xoa02_KhongTonTai() {

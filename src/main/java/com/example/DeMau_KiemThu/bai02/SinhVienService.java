@@ -11,8 +11,8 @@ public class SinhVienService {
         if (sv == null || sv.getMaSV().isEmpty() || sv.getTen().isEmpty() || sv.getChuyenNganh().isEmpty()) {
             throw new IllegalArgumentException("Lỗi: Các trường không được để trống!");
         }
-        if (sv.getTuoi() <= 0 || sv.getTuoi() >= 18 || sv.getDiemTrungBinh() < 0) {
-            throw new IllegalArgumentException("Lỗi, tuổi phải lớn hơn 0 và nhỏ hơn 18. Vui lòng nhập lại!");
+        if (sv.getTuoi() < 18 || sv.getDiemTrungBinh() < 0 || sv.getDiemTrungBinh() > 10) {
+            throw new IllegalArgumentException("Lỗi: Tuổi phải >= 18 và điểm từ 0 đến 10");
         }
         return danhSachSinhVien.add(sv);
     }
@@ -22,7 +22,7 @@ public class SinhVienService {
         if (sv == null || sv.getMaSV().isEmpty() || tenMoi.isEmpty() || nganhMoi.isEmpty()) {
             throw new IllegalArgumentException("Lỗi: Các trường không được để trống!");
         }
-        if (tuoiMoi < 18 || diemMoi < 0 || KyMoi<0) {
+        if (tuoiMoi < 18 || diemMoi < 0 || diemMoi > 10 || KyMoi < 0) {
             throw new IllegalArgumentException("Lỗi, vui lòng nhập lại :))");
         }
         sv.setTen(tenMoi);

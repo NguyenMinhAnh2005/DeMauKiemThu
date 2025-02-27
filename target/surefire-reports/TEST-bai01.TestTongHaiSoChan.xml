@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="bai02.TestSinhVien" time="0.052" tests="22" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="bai01.TestTongHaiSoChan" time="0.002" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -56,26 +56,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="them02_TuoiNhoHon18" classname="bai02.TestSinhVien" time="0.005"/>
-  <testcase name="timKiem02_KhongTonTai" classname="bai02.TestSinhVien" time="0.002"/>
-  <testcase name="timKiem03_MaRong" classname="bai02.TestSinhVien" time="0.001"/>
-  <testcase name="them01_HopLe" classname="bai02.TestSinhVien" time="0.001"/>
-  <testcase name="them06_Tuoilonhon18" classname="bai02.TestSinhVien" time="0.003"/>
-  <testcase name="them07_TuoiNhoHon0" classname="bai02.TestSinhVien" time="0.001"/>
-  <testcase name="xoa04_DanhSachRong" classname="bai02.TestSinhVien" time="0.002"/>
-  <testcase name="timKiem01_TonTai" classname="bai02.TestSinhVien" time="0.002"/>
-  <testcase name="sua01_HopLe" classname="bai02.TestSinhVien" time="0.0"/>
-  <testcase name="sua04_DiemAm" classname="bai02.TestSinhVien" time="0.002"/>
-  <testcase name="sua08_SinhVienKhongTonTai" classname="bai02.TestSinhVien" time="0.001"/>
-  <testcase name="xoa02_KhongTonTai" classname="bai02.TestSinhVien" time="0.001"/>
-  <testcase name="them05_DiemTren10" classname="bai02.TestSinhVien" time="0.002"/>
-  <testcase name="them04_TenRong" classname="bai02.TestSinhVien" time="0.002"/>
-  <testcase name="sua03_TuoiNhoHon18" classname="bai02.TestSinhVien" time="0.001"/>
-  <testcase name="xoa05_MaRong" classname="bai02.TestSinhVien" time="0.001"/>
-  <testcase name="sua07_MaRong" classname="bai02.TestSinhVien" time="0.002"/>
-  <testcase name="them03_MaSinhVienRong" classname="bai02.TestSinhVien" time="0.001"/>
-  <testcase name="sua06_ChuyenNganhRong" classname="bai02.TestSinhVien" time="0.001"/>
-  <testcase name="sua03_XoaSinhVienDaXoa" classname="bai02.TestSinhVien" time="0.001"/>
-  <testcase name="sua02_TenRong" classname="bai02.TestSinhVien" time="0.002"/>
-  <testcase name="sua05_DiemToiDa" classname="bai02.TestSinhVien" time="0.001"/>
+  <testcase name="testTongChan" classname="bai01.TestTongHaiSoChan" time="0.002"/>
 </testsuite>

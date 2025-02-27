@@ -1,11 +1,12 @@
 package bai03;
-
+import org.openqa.selenium.chrome.ChromeOptions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.junit.jupiter.api.AfterEach;
 
 public class TestTrangWeb {
     ChromeDriver chromeDriver;
@@ -13,7 +14,18 @@ public class TestTrangWeb {
     @BeforeEach
     public void setUp() {
         WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--user-data-dir=/tmp/chrome-profile"); // Tạo profile riêng biệt
+        options.addArguments("--disable-dev-shm-usage"); // Tránh lỗi trên Docker
+        options.addArguments("--remote-allow-origins=*"); // Tránh lỗi kết nối trình duyệt
         chromeDriver = new ChromeDriver();
+    }
+
+    @AfterEach
+    public void tearDown() {
+        if (chromeDriver != null) {
+            chromeDriver.quit();
+        }
     }
 
     @Test
@@ -45,6 +57,7 @@ public class TestTrangWeb {
         inputDangky.click();
     }
 
+
     @Test
     public void testDangNhap() throws InterruptedException {
         chromeDriver.get("https://vitimex.com.vn/");
@@ -64,6 +77,7 @@ public class TestTrangWeb {
         WebElement buttonDangNhap = chromeDriver.findElement(By.xpath("//a[@id='signin-btn']"));
         buttonDangNhap.click();
     }
+
 
     @Test
     public void testThemSPVaoGioHang() {

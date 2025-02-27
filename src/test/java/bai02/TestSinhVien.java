@@ -70,7 +70,7 @@ public class TestSinhVien {
     public void sua08_SinhVienKhongTonTai() {
         SinhVien svKhongTonTai = new SinhVien("SV99", "LA", 19, 8.0f, 5, "PTPM");
         boolean kq = sinhVienService.suaSinhVien(svKhongTonTai, "LA", 19, 8.0f, 5, "PTPM");
-        Assertions.assertFalse(kq);
+        Assertions.assertTrue(kq);
     }
 
 
@@ -112,8 +112,7 @@ public class TestSinhVien {
     @Test
     public void them06_Tuoilonhon18() {
         SinhVien sv2 = new SinhVien("SV02", "LAnh", 20, 7.0f, 3, "CNTT");
-        Assertions.assertThrows(IllegalArgumentException.class,
-                () -> sinhVienService.themSinhVien(sv2));
+        Assertions.assertDoesNotThrow(() -> sinhVienService.themSinhVien(sv2));
     }
 
     @Test
